@@ -1,133 +1,106 @@
-/**
-Palette: https://scrimba.com/links/hometown-palette
-RED: #E63946
-LIGHT: #F1FAEE
-AQUA: #A8DADC
-LIGHT BLUE: #457B9D
-DARK BLUE: #1D3557
------
-black: #002E42
-yellow: #fae373
-light blue: #7ED7E9
-blue: #00BDE0
-dark blue: #00415C
-
-*/
-
 body {
-    margin: 0;
-    text-align: center;
-    font-family: "MedievalSharp", cursive;
-    font-weight: 450;
-    background: linear-gradient(#00BDE0, #00415C);
-    color: whitesmoke;
-    text-shadow: 1px 1px #002E42;
-    font-size: 18px;
+    margin: 20px;
+    /*
+    Challenge:
+    Find a web safe font you like, and add it 
+    to your card.
+    */
 }
 
-h2, h3 {
-    font-weight: 800;
+.avatar {
+    width: 150px;
+    animation: 0.5s fade-in;
 }
 
-.italy {
-    font-style: italic;
+@keyframes fade-in {
+    from {
+        filter: blur(4px);
+        transform: scale(1.5);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }
 
-.small {
-    font-size: 8px;
-    font-weight: 100;
+.avatar:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.2);
 }
 
-#bubbles-overlay {
-    background-image: url("images/bubbles_pattern.png");
-    background-position: 0 20%;
-    background-size: cover;
-    background-color: rgb(255, 255, 255, 20%);
-}
-
-.bg-blur {
-    backdrop-filter: blur(8px);
-    background-color: rgb(255, 0, 64, 10%);
-}
-
-img {
-    width: 100px;
-}
-
-#hero {
-    margin: 0;
-    background-image: url("images/underwater.webp");
-    background-size: cover;
-    padding: 20px 0 50px 0;
-    border-bottom: 5px solid #7ED7E9;
-}
-
-#hero-txt {
+.card {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 400px;
     margin: 0 auto;
-    width: 75%;
-}
-
-h1 {
-    font-family: "Skranji", system-ui;
-}
-
-#hero-txt > h1, #hero-txt > h2 {
-    color: whitesmoke;
-    border: 2px solid #002E42;
-    border-radius: 20px;
-    padding: 10px 20px;
-    background-color: rgb(0, 0, 64, 30%);
-}
-
-.section-title {
-    display: block;
-    margin: 50px 20px 20px;
-    border-bottom: 2px solid #7ED7E9;
-}
-
-#activities-row {
+    padding: 25px 50px;
     display: flex;
     justify-content: space-around;
-    margin: 20px;
-    
-}
-
-.activity-card {
-    width: 25%;
-    padding: 10px;
-    border: 2px solid #002E42;
+    text-align: center;
+    background: #f9dbbd;
+    color: #2b2839;
+    border-bottom: 6px solid #F25C54;
     border-radius: 5px;
-    border-bottom: 10px solid #002E42;
+    
+    background-image: url('/images/hollow_star.png');
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: 95% 95%;
+    
+    box-shadow: 10px -10px #fae0e4;
+    /*
+    Challenge:
+    Find a color palette you like on Coolors.co
+    and use it in your business card.
+     */
 }
 
-.activity-card > img {
-    height: 100px;
-    object-fit: cover;
-    object-position: center;
-    border: 5px solid whitesmoke;
-    border-radius: 50%;
+.card h3 {
+    animation: 0.5s slide-in;;
 }
 
-#business-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px #002E42 solid;
-    padding: 30px;
-    width: 50%;
-    margin: 0 auto;
-    border-bottom: 10px solid #002E42;
+.card p {
+    margin: 5px auto;
+    font-family: 'Courier New', Courier, monospace;
+    animation: 1s slide-in;;
 }
 
-#it-her {
-    margin: 20px 5px 0;
+.card h4 {
+    animation: 1.5s slide-in;;
 }
 
-.it-her-lbl {
-    margin: 0;
+.card > div > :hover {
+  transition: all 0.1s;
+  transform: scale(1.1);
 }
 
-#reclaimer {
-    margin-bottom: 0;
-    padding-bottom: 50px;
+@keyframes slide-in {
+  from {
+    translate: -150vw 0;
+  }
+
+  to {
+    translate: 0 0;
+  }
 }
+
+.border-blue {
+    border: 1px dotted blue;
+}
+
+/*
+Stretch goals:
+Find other ways you can personalize 
+the design of your business card, e.g.:
+- change the border(s)
+- add border radius
+- shuffle the layout
+- shadows        🤯
+- hover effects  🤯🤯
+- animations     🤯🤯🤯
+*/
+
+/*
+Final challenge:
+Download the code to your local computer and place it
+in a folder called "business-card"
+*/
